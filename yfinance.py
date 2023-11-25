@@ -8,6 +8,7 @@ from dotenv import dotenv_values
 
 base_path = Path()
 envars = base_path.cwd() / '.env'
+print(envars)
 config = dict(dotenv_values(envars))
 # config = dict(dotenv_values(".env"))
 app = FastAPI()
