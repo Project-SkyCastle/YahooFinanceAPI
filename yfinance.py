@@ -10,7 +10,7 @@ import os
 base_path = Path()
 envars = base_path.cwd() / '.env'
 print(envars)
-print(os.getcwd())
+print(os.path.dirname(os.path.abspath(__file__)))
 config = dict(dotenv_values(envars))
 # config = dict(dotenv_values(".env"))
 app = FastAPI()
