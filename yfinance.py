@@ -2,19 +2,13 @@ from fastapi import FastAPI, Response
 import uvicorn
 import requests
 import json
-from pathlib import Path
 from dotenv import dotenv_values
 import os
 
-
-base_path = Path()
-envars = base_path.cwd() / '.env'
-print(envars)
-print(os.path.dirname(os.path.abspath(__file__)))
-config = dict(dotenv_values(envars))
-# config = dict(dotenv_values(".env"))
+config = dict(dotenv_values(os.path.dirname(os.path.abspath(__file__)) + ".env"))
 app = FastAPI()
 url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v3/get-chart"
+
 
 @app.get("/")
 async def root():
