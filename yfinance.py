@@ -4,7 +4,7 @@ import requests
 import json
 from dotenv import dotenv_values
 
-config = dict(dotenv_values(".env"))
+config = dict(dotenv_values("./.env"))
 app = FastAPI()
 url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v3/get-chart"
 
