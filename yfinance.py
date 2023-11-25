@@ -4,7 +4,7 @@ import requests
 import json
 from dotenv import dotenv_values
 import os, sys
-sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
 config = dict(dotenv_values(".env"))
 app = FastAPI()
